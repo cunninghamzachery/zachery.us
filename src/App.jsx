@@ -5,53 +5,58 @@ import styled from 'styled-components';
 
 
 
-
-
-
-
-
-
-
-
-const Header = styled.div`
+const StyledHeader = styled.header`
   height: 100px;
   width: 100vw;
-  display: grid;
   background: red;
-  justify-self: center;
-  align-self: center;
-  border-radius: 0;
   position: sticky;
   top: 0; 
-  left: calc(50vw - 650px);
-
+  left: 0;
   z-index: 100;
-
 `;
 
 
+const StyledSection = styled.section`
+  width: calc(100vw - 80px);
+  max-width: 1090px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  background:orange;
 
-const Section = styled.div`
-  min-height: 100px;
-  width: 1020px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  background:grey;
+  align-items: center;
+  justify-content: center;
+
   justify-self: center;
   align-self: center;
-  border-radius: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  
+  margin-bottom: 120px;
   position: relative;
+
+  row-gap: 0px;
+  column-gap: 0px;
+`;
+
+
+
+
+const Container = styled.div`
+  height: 440px;
+  width: 300px;
+  background: white;
   padding: 30px;
+
+
 
 `;
 
 
-const Article = styled.div`
-  height: 360px;
-  width: 300px;
+
+
+const Title = styled.div`
+  min-height: 180px;
+  width: 740px;
+  max-width: calc(100vw - 200px);
   display: grid;
   background:white;
   justify-self: center;
@@ -61,19 +66,19 @@ const Article = styled.div`
   position: relative;
   border: 2px solid #000;
   box-shadow: 0 4px 0px rgb(0, 0, 0);
-
+  margin-bottom: 30px;
 
 `;
 
-const Button = styled.div`
-  height: 40px;
-  min-width: 200px;
-  display: grid;
+
+const Article = styled.div`
+  height: 360px;
+  width: 300px;
+  display: column;
   background:white;
   justify-self: center;
   align-self: center;
   border-radius: 10px;
-  margin-top: 30px;
   margin-bottom: 30px;
   position: relative;
   border: 2px solid #000;
@@ -83,6 +88,40 @@ const Button = styled.div`
 `;
 
 
+
+const Button = styled.div`
+  min-height: 40px;
+  width: 200px;
+  max-width: calc(100vw - 300px);
+  display: grid;
+  background:white;
+  justify-self: center;
+  align-self: center;
+  border-radius: 10px;
+  
+  position: relative;
+  border: 2px solid #000;
+  box-shadow: 0 4px 0px rgb(0, 0, 0);
+
+
+`;
+
+
+const Icon = styled.div`
+  height: 40px;
+  width: 40px;
+  display: grid;
+  background:white;
+  justify-self: center;
+  align-self: center;
+  border-radius: 10px;
+  position: relative;
+  border: 2px solid #000;
+  box-shadow: 0 4px 0px rgb(0, 0, 0);
+
+  margin: 15px;
+
+`;
 
 
 const Footer = styled.div`
@@ -99,77 +138,96 @@ const Footer = styled.div`
 
 
 
-
 function App() {
   return (
     <>
-      <Header></Header>
+      <StyledHeader></StyledHeader>
 
-      
-      <Section> {/* Lander */}
-      
-      </Section> 
 
-      
-      <Section> {/* Icons */}
-      
-      </Section> 
+      <StyledSection></StyledSection>
 
-      
-      <Section> {/* Projects */}
+
+      <StyledSection>
+
+        <Icon /> <Icon /> <Icon /> <Icon /> <Icon /> <Icon />
+        <Icon /> <Icon /> <Icon /> <Icon /> <Icon /> <Icon />
+        <Icon /> <Icon /> <Icon /> <Icon /> <Icon /> <Icon />
+        <Icon /> <Icon /> <Icon /> <Icon /> <Icon /> <Icon />
+
+      </StyledSection>
+
+      <StyledSection>
+
+        <Title></Title>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+    
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+      </StyledSection>
+
+      <StyledSection>
+
+        <Title></Title>
         
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+
+        <Container>
+          <Article>
+          </Article>
+          <Button />
+        </Container>
+        
+      </StyledSection>
+
+      <StyledSection>
         <div>
-        <Article>
-  
-        </Article>
-        <Button></Button>
+          <Title style={{ height: '400px' }}></Title>
+          <Button style={{ width: '500px' }}/>
         </div>
-        <div>
-        <Article>
-
-        </Article>
-        <Button></Button>
-        </div>
-
-        <div>
-        <Article>
-
-        </Article>
-        <Button></Button>
-        </div>
-
-        <div>
-        <Article>
-
-        </Article>
-        <Button></Button>
-        </div>
-
-        <div>
-        <Article>
-
-        </Article>
-        <Button></Button>
-        </div>
-
-        <div>
-        <Article>
-
-        </Article>
-        <Button></Button>
-        </div>
-
-      </Section> 
-
-      
-      <Section> {/* Papers */}
-      
-      </Section>
-
-      
-      <Section> {/* Call to action */}
-      
-      </Section> 
+      </StyledSection>
 
       <Footer></Footer>
     </>
