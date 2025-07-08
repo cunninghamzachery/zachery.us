@@ -1,18 +1,34 @@
 import styled from 'styled-components';
 
 
+import { createGlobalStyle } from 'styled-components';
 
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --background: #4CAF50;
+  }
+`;
 
 
 
 const StyledHeader = styled.header`
   height: 100px;
   width: 100vw;
-  background: red;
+  background: white;
   position: sticky;
   top: 0; 
   left: 0;
   z-index: 100;
+  border-bottom: 4px solid #000;
+
+`;
+
+
+const StyledLander = styled.div`
+  height: calc(100vh - 200px);
+  width: 100vw;
+  background: white;
+
 `;
 
 
@@ -22,7 +38,6 @@ const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
-  background:orange;
 
   align-items: center;
   justify-content: center;
@@ -43,7 +58,6 @@ const StyledSection = styled.section`
 const Container = styled.div`
   height: 440px;
   width: 300px;
-  background: white;
   padding: 30px;
 
 
@@ -53,8 +67,8 @@ const Container = styled.div`
 
 
 
-const Title = styled.div`
-  min-height: 180px;
+const CallToAction = styled.div`
+  min-height: 400px;
   width: 740px;
   max-width: calc(100vw - 200px);
   display: grid;
@@ -101,7 +115,7 @@ const Button = styled.div`
   
   position: relative;
   border: 2px solid #000;
-  box-shadow: 0 4px 0px rgb(0, 0, 0);
+  box-shadow: 0px 4px 0px rgb(0, 0, 0);
 
 
 `;
@@ -128,19 +142,26 @@ const Footer = styled.div`
   height: 100px;
   width: 100vw;
   display: grid;
-  background:purple;
+  background:white;
   justify-self: center;
   align-self: center;
   border-radius: 0;
-
+  border-top: 4px solid #000;
 
 `;
+
+
+
 
 
 
 function App() {
   return (
     <>
+      <GlobalStyle />
+
+      <StyledLander></StyledLander>
+
       <StyledHeader></StyledHeader>
 
 
@@ -157,11 +178,15 @@ function App() {
       </StyledSection>
 
       <StyledSection>
-
-        <Title></Title>
+        <h2>PROJECTS</h2>
+        
 
         <Container>
           <Article>
+
+
+
+
           </Article>
           <Button />
         </Container>
@@ -200,7 +225,7 @@ function App() {
 
       <StyledSection>
 
-        <Title></Title>
+        <h2>PAPERS</h2>
         
         <Container>
           <Article>
@@ -223,10 +248,10 @@ function App() {
       </StyledSection>
 
       <StyledSection>
-        <div>
-          <Title style={{ height: '400px' }}></Title>
+
+          <CallToAction></CallToAction>
           <Button style={{ width: '500px' }}/>
-        </div>
+
       </StyledSection>
 
       <Footer></Footer>
